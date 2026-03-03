@@ -229,10 +229,8 @@ const Analysis = ({ onNavigate }) => {
           </div>
           <div className="benefit-badge">
             <span className="material-symbols-outlined">auto_graph</span>
-            <div>
-              <p>效益分析</p>
-              <p className="benefit-value">+12.4% 優於平均</p>
-            </div>
+            <p>效益分析</p>
+            <p className="benefit-value">+12.4% 優於平均</p>
           </div>
         </section>
       </div>
