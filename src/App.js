@@ -225,7 +225,7 @@ const Analysis = ({ onNavigate }) => {
           </div>
           <div className="comparison-item">
             <div className="comp-label"><span>上個月</span><span>477.1 kWh</span></div>
-            <div className="comp-bar"><div style={{width: '95%'}}></div>
+            <div className="comp-bar"><div style={{width: '95%'}}></div></div>
           </div>
           <div className="benefit-badge">
             <span className="material-symbols-outlined">auto_graph</span>
