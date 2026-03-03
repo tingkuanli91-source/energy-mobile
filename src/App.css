@@ -1479,3 +1479,115 @@ input:checked + .slider:before {
 .setting-item.clickable:hover {
   background: #f8fafc;
 }
+
+/* Alerts Panel */
+.alerts-panel {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  animation: slideDown 0.3s ease;
+}
+
+.alerts-panel h3 {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+}
+
+.alert-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.alert-item:last-child { margin-bottom: 0; }
+
+.alert-item.warning { background: rgba(245, 158, 11, 0.1); }
+.alert-item.warning .material-symbols-outlined { color: var(--warning); }
+
+.alert-item.info { background: rgba(15, 73, 189, 0.1); }
+.alert-item.info .material-symbols-outlined { color: var(--primary); }
+
+.alert-item.success { background: rgba(16, 185, 129, 0.1); }
+.alert-item.success .material-symbols-outlined { color: var(--success); }
+
+.alert-message { font-size: 13px; font-weight: 500; }
+.alert-time { font-size: 11px; color: var(--text-secondary); margin-top: 4px; }
+
+/* Time Toggle */
+.time-toggle {
+  display: flex;
+  background: #e2e8f0;
+  border-radius: 8px;
+  padding: 2px;
+}
+
+.time-toggle button {
+  padding: 6px 12px;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.time-toggle button.active {
+  background: white;
+  color: var(--primary);
+}
+
+/* Modal Actions */
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  border: none;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+/* Profile Company */
+.profile-company {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* Redeem Hint */
+.redeem-hint {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.stock {
+  font-size: 10px;
+  color: var(--text-secondary);
+  margin-left: 8px;
+}
