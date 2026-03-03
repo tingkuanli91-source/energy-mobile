@@ -1086,3 +1086,396 @@ input:checked + .slider:before {
     border-color: #334155;
   }
 }
+
+/* Interactive Chart Bars */
+.chart-container.interactive {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 128px;
+}
+
+.chart-bar-wrapper {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.chart-bar-wrapper.large {
+  height: 150px;
+}
+
+.chart-bar {
+  width: 100%;
+  background: var(--primary);
+  border-radius: 4px 4px 0 0;
+  min-height: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.chart-bar:hover {
+  filter: brightness(1.1);
+  transform: scaleY(1.02);
+}
+
+.chart-bar.large {
+  border-radius: 6px 6px 0 0;
+}
+
+/* Device Detail Modal */
+.device-detail-modal {
+  position: fixed;
+  bottom: 80px;
+  left: 16px;
+  right: 16px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 -4px 30px rgba(0,0,0,0.15);
+  z-index: 50;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.modal-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.modal-header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.modal-content {
+  padding: 16px 20px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row .status {
+  font-weight: 600;
+}
+
+.detail-row .status.online { color: var(--success); }
+.detail-row .status.running { color: var(--primary); }
+.detail-row .status.standby { color: var(--text-secondary); }
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  padding: 16px 0;
+}
+
+.action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background: #f8fafc;
+  border-color: var(--primary);
+}
+
+.action-btn .material-symbols-outlined {
+  font-size: 20px;
+  color: var(--primary);
+}
+
+/* Data Table */
+.data-table {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.data-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 13px;
+}
+
+.data-table th {
+  background: #f8fafc;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.data-table td {
+  border-top: 1px solid #e2e8f0;
+}
+
+.data-table tr:hover td {
+  background: #f8fafc;
+}
+
+/* Interactive Donut */
+.donut-chart.interactive {
+  cursor: pointer;
+}
+
+.donut-segment {
+  transition: all 0.3s;
+}
+
+.donut-segment:hover {
+  stroke-width: 5;
+  filter: brightness(1.1);
+}
+
+/* Interactive Environment Cards */
+.env-card.interactive {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.env-card.interactive:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Redeem Modal */
+.redeem-modal {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  padding: 16px;
+  margin-bottom: 16px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.redeem-modal h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.redeem-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.redeem-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.redeem-item:hover {
+  background: #e2e8f0;
+}
+
+.redeem-item .material-symbols-outlined:first-child {
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.redeem-info {
+  flex: 1;
+}
+
+.redeem-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.redeem-points {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.redeem-item .chevron {
+  color: var(--text-secondary);
+}
+
+/* Profile Avatar Large */
+.profile-avatar.large {
+  width: 80px;
+  height: 80px;
+}
+
+.profile-avatar.large .material-symbols-outlined {
+  font-size: 64px;
+}
+
+/* Edit Modal */
+.edit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 24px;
+}
+
+.edit-modal form {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.edit-modal h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.cancel-btn, .save-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #f1f5f9;
+  border: none;
+  color: var(--text-secondary);
+}
+
+.save-btn {
+  background: var(--primary);
+  border: none;
+  color: white;
+}
+
+/* Badge Dot */
+.badge-dot {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  background: var(--danger);
+  border-radius: 50%;
+}
+
+.notification-btn {
+  position: relative;
+}
+
+/* Bar Chart Interactive */
+.bar-chart.interactive .bar-item {
+  cursor: pointer;
+}
+
+.bar-chart.interactive .bar.selected {
+  filter: brightness(1.2);
+}
+
+/* Initiative Clickable */
+.initiative-item.clickable {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.initiative-item.clickable:hover {
+  background: rgba(15, 73, 189, 0.1);
+}
+
+/* Clickable Setting Items */
+.setting-item.clickable {
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.setting-item.clickable:hover {
+  background: #f8fafc;
+}
